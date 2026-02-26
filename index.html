@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>從 0 開始：Figma AI → v0 → Claude Code → Vercel → Cowork｜操作手冊</title>
+  <meta name="description" content="Figma AI → v0 → Claude Code → Vercel → Cowork：零程式基礎互動式學習手冊。" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
+  <header class="navbar" role="banner">
+    <div class="container">
+      <button id="btnMenu" class="mobile-menu-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="sidebar">☰</button>
+      <div class="nav-brand" aria-label="網站標題">
+        <span class="logo" aria-hidden="true">🚀</span>
+        <span>從 0 開始 AI 產品開發手冊</span>
+      </div>
+      <div class="actions">
+        <a class="ghost-btn" href="#/publish-this-handbook" title="把手冊變成公開網站">公開分享</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <aside id="sidebar" class="sidebar" aria-label="學習路線">
+      <div class="sidebar-header">
+        <h3>學習路線</h3>
+        <div class="subtitle">完全不會程式也能做 APP</div>
+        <label class="sidebar-search">
+          <span class="sr-only">搜尋章節</span>
+          <input id="searchInput" type="search" placeholder="搜尋章節…" autocomplete="off" />
+        </label>
+      </div>
+
+      <nav id="navList" class="sidebar-nav" aria-label="章節"></nav>
+
+      <div class="sidebar-footer">
+        <div class="progress-indicator" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+        <div id="progressText" class="progress-text">學習進度：0%</div>
+      </div>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <div class="content-toolbar" role="toolbar" aria-label="工具列">
+        <div class="view-toggle" role="tablist" aria-label="閱讀模式切換">
+          <button id="tabRead" class="toggle-btn active" role="tab" aria-selected="true">👁️ 閱讀版</button>
+          <button id="tabMd" class="toggle-btn" role="tab" aria-selected="false">&lt;/&gt; Markdown 原文</button>
+        </div>
+        <div class="actions">
+          <button id="btnPrint" class="print-btn" type="button" title="列印此頁">🖨️ 列印此頁</button>
+          <button id="btnCopyMd" class="ghost-btn" type="button" title="複製本頁 Markdown">📋 複製 Markdown</button>
+        </div>
+      </div>
+
+      <article id="content" class="rendered-content" aria-live="polite"></article>
+
+      <section id="mdBox" class="markdown-content" hidden>
+        <pre><code id="mdCode"></code></pre>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/content.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
